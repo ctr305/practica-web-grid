@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: red;
+    width: 80%;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: max-content max-content 80% minmax(5%, auto);
+}
+
+.header {
+    background-color: red;
+    color: white;
+    min-height: 80px;
+    line-height: 80px;
+    border-bottom: 3px dashed black;
+    grid-column: 1 / span 2;
+    display: grid;
+    place-content: center;
+}
+
+.header h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul {
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+li {
+    background-color: lightblue;
+    list-style: none;
+    padding: 10px;
+    float: left;
+}
+
+.content {
+    background-color: green;
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.article {
+    padding: 10px;
+    border-bottom: 2px solid limegreen;
+}
+
+@media all and (max-width: 768px) {
+    .article {
+        font-size: 0.8em;
+    }
+}
+
+.article:first-child {
+    border-top: 2px solid lightgreen;
+}
+
+.aside {
+    background-color: orange;
+    text-overflow: ellipsis;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media all and (max-width: 768px) {
+    .aside {
+        font-size: 0.8em;
+    }
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    clear: both;
+}
+
+@media (max-width: 160px) {
+    .footer {
+        font-size: 0.7em;
+    }
+}
