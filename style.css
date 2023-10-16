@@ -16,7 +16,7 @@ body {
     min-height: 650px;
     display: grid;
     grid-template-columns: 70% auto;
-    grid-template-rows: max-content max-content 80% minmax(5%, auto);
+    grid-template-rows: max-content max-content minmax(80%, auto) minmax(5%, auto);
 }
 
 .header {
@@ -26,6 +26,7 @@ body {
     line-height: 80px;
     border-bottom: 3px dashed black;
     grid-column: 1 / span 2;
+    grid-row: 1;
     display: grid;
     place-content: center;
 }
@@ -36,9 +37,11 @@ body {
     text-overflow: ellipsis;
 }
 
-ul {
-    background-color: lightblue;
+.nav {
     overflow: hidden;
+    background-color: lightblue;
+    grid-column: 1 / span 2;
+    grid-row: 2;
 }
 
 li {
@@ -56,6 +59,8 @@ li {
     padding-top: 20px;
     padding-bottom: 20px;
     box-sizing: border-box;
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .article {
@@ -78,6 +83,8 @@ li {
     text-overflow: ellipsis;
     padding: 10px;
     box-sizing: border-box;
+    grid-column: 2;
+    grid-row: 3;
 }
 
 @media all and (max-width: 768px) {
@@ -91,6 +98,8 @@ li {
     color: white;
     text-align: center;
     clear: both;
+    grid-column: 1 / span 2;
+    grid-row: 4;
 }
 
 @media (max-width: 160px) {
